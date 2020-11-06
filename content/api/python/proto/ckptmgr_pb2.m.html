@@ -1025,11 +1025,11 @@ table {
         
         </li>
         <li class="mono">
-        <span class="class_name"><a href="#heronpy.proto.ckptmgr_pb2.RegisterTMasterRequest">RegisterTMasterRequest</a></span>
+        <span class="class_name"><a href="#heronpy.proto.ckptmgr_pb2.RegisterTManagerRequest">RegisterTManagerRequest</a></span>
         
         </li>
         <li class="mono">
-        <span class="class_name"><a href="#heronpy.proto.ckptmgr_pb2.RegisterTMasterResponse">RegisterTMasterResponse</a></span>
+        <span class="class_name"><a href="#heronpy.proto.ckptmgr_pb2.RegisterTManagerResponse">RegisterTManagerResponse</a></span>
         
         </li>
         <li class="mono">
@@ -1131,7 +1131,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='heron.proto.ckptmgr',
   syntax='proto2',
   serialized_options=_b('\n\036org.apache.heron.proto.ckptmgrB\021CheckpointManager'),
-  serialized_pb=_b('\n\rckptmgr.proto\x12\x13heron.proto.ckptmgr\x1a\x0c\x63ommon.proto\x1a\x13physical_plan.proto\"N\n\x1cStatefulConsistentCheckpoint\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\x12\x17\n\x0fpacking_plan_id\x18\x02 \x02(\t\"r\n\x1dStatefulConsistentCheckpoints\x12Q\n\x16\x63onsistent_checkpoints\x18\x01 \x03(\x0b\x32\x31.heron.proto.ckptmgr.StatefulConsistentCheckpoint\"0\n\x17StartStatefulCheckpoint\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\"u\n!StatefulConsistentCheckpointSaved\x12P\n\x15\x63onsistent_checkpoint\x18\x01 \x02(\x0b\x32\x31.heron.proto.ckptmgr.StatefulConsistentCheckpoint\"J\n\x1bRestoreTopologyStateRequest\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\x12\x14\n\x0crestore_txid\x18\x02 \x02(\x03\"w\n\x1cRestoreTopologyStateResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12\x15\n\rcheckpoint_id\x18\x02 \x02(\t\x12\x14\n\x0crestore_txid\x18\x03 \x02(\x03\"M\n\x12ResetTopologyState\x12\x12\n\ndead_stmgr\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65\x61\x64_taskid\x18\x02 \x01(\x05\x12\x0e\n\x06reason\x18\x03 \x02(\t\"\\\n\x13InstanceStateStored\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\x12.\n\x08instance\x18\x02 \x02(\x0b\x32\x1c.heron.proto.system.Instance\"5\n\x1cStartStmgrStatefulProcessing\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\"D\n\x16RegisterTMasterRequest\x12\x15\n\rtopology_name\x18\x01 \x02(\t\x12\x13\n\x0btopology_id\x18\x02 \x02(\t\"E\n\x17RegisterTMasterResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\"d\n\x1e\x43leanStatefulCheckpointRequest\x12#\n\x1boldest_checkpoint_preserved\x18\x01 \x01(\t\x12\x1d\n\x15\x63lean_all_checkpoints\x18\x02 \x01(\x08\"m\n\x1f\x43leanStatefulCheckpointResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12\x1e\n\x16\x63leaned_checkpoint_ids\x18\x02 \x03(\t\"W\n\x17InstanceStateCheckpoint\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\x12\r\n\x05state\x18\x02 \x01(\x0c\x12\x16\n\x0estate_location\x18\x03 \x01(\t\"J\n\x1b\x43heckpointComponentMetadata\x12\x16\n\x0e\x63omponent_name\x18\x01 \x02(\t\x12\x13\n\x0bparallelism\x18\x02 \x02(\x05\"\x8d\x01\n\x14RegisterStMgrRequest\x12\x15\n\rtopology_name\x18\x01 \x02(\t\x12\x13\n\x0btopology_id\x18\x02 \x02(\t\x12\x10\n\x08stmgr_id\x18\x03 \x02(\t\x12\x37\n\rphysical_plan\x18\x04 \x02(\x0b\x32 .heron.proto.system.PhysicalPlan\"C\n\x15RegisterStMgrResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\"\x8c\x01\n\x18SaveInstanceStateRequest\x12.\n\x08instance\x18\x01 \x02(\x0b\x32\x1c.heron.proto.system.Instance\x12@\n\ncheckpoint\x18\x02 \x02(\x0b\x32,.heron.proto.ckptmgr.InstanceStateCheckpoint\"\x8e\x01\n\x19SaveInstanceStateResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12.\n\x08instance\x18\x02 \x02(\x0b\x32\x1c.heron.proto.system.Instance\x12\x15\n\rcheckpoint_id\x18\x03 \x02(\t\"`\n\x17GetInstanceStateRequest\x12.\n\x08instance\x18\x01 \x02(\x0b\x32\x1c.heron.proto.system.Instance\x12\x15\n\rcheckpoint_id\x18\x02 \x02(\t\"\xcf\x01\n\x18GetInstanceStateResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12.\n\x08instance\x18\x02 \x02(\x0b\x32\x1c.heron.proto.system.Instance\x12\x15\n\rcheckpoint_id\x18\x03 \x02(\t\x12@\n\ncheckpoint\x18\x04 \x01(\x0b\x32,.heron.proto.ckptmgr.InstanceStateCheckpoint\"3\n\x1aInitiateStatefulCheckpoint\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\"[\n\x1cStoreInstanceStateCheckpoint\x12;\n\x05state\x18\x01 \x02(\x0b\x32,.heron.proto.ckptmgr.InstanceStateCheckpoint\"Z\n\x1bRestoreInstanceStateRequest\x12;\n\x05state\x18\x01 \x02(\x0b\x32,.heron.proto.ckptmgr.InstanceStateCheckpoint\"a\n\x1cRestoreInstanceStateResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12\x15\n\rcheckpoint_id\x18\x02 \x02(\t\"8\n\x1fStartInstanceStatefulProcessing\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\"j\n\x1c\x44ownstreamStatefulCheckpoint\x12\x16\n\x0eorigin_task_id\x18\x01 \x02(\x05\x12\x1b\n\x13\x64\x65stination_task_id\x18\x02 \x02(\x05\x12\x15\n\rcheckpoint_id\x18\x03 \x02(\tB3\n\x1eorg.apache.heron.proto.ckptmgrB\x11\x43heckpointManager')
+  serialized_pb=_b('\n\rckptmgr.proto\x12\x13heron.proto.ckptmgr\x1a\x0c\x63ommon.proto\x1a\x13physical_plan.proto\"N\n\x1cStatefulConsistentCheckpoint\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\x12\x17\n\x0fpacking_plan_id\x18\x02 \x02(\t\"r\n\x1dStatefulConsistentCheckpoints\x12Q\n\x16\x63onsistent_checkpoints\x18\x01 \x03(\x0b\x32\x31.heron.proto.ckptmgr.StatefulConsistentCheckpoint\"0\n\x17StartStatefulCheckpoint\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\"u\n!StatefulConsistentCheckpointSaved\x12P\n\x15\x63onsistent_checkpoint\x18\x01 \x02(\x0b\x32\x31.heron.proto.ckptmgr.StatefulConsistentCheckpoint\"J\n\x1bRestoreTopologyStateRequest\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\x12\x14\n\x0crestore_txid\x18\x02 \x02(\x03\"w\n\x1cRestoreTopologyStateResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12\x15\n\rcheckpoint_id\x18\x02 \x02(\t\x12\x14\n\x0crestore_txid\x18\x03 \x02(\x03\"M\n\x12ResetTopologyState\x12\x12\n\ndead_stmgr\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65\x61\x64_taskid\x18\x02 \x01(\x05\x12\x0e\n\x06reason\x18\x03 \x02(\t\"\\\n\x13InstanceStateStored\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\x12.\n\x08instance\x18\x02 \x02(\x0b\x32\x1c.heron.proto.system.Instance\"5\n\x1cStartStmgrStatefulProcessing\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\"E\n\x17RegisterTManagerRequest\x12\x15\n\rtopology_name\x18\x01 \x02(\t\x12\x13\n\x0btopology_id\x18\x02 \x02(\t\"F\n\x18RegisterTManagerResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\"d\n\x1e\x43leanStatefulCheckpointRequest\x12#\n\x1boldest_checkpoint_preserved\x18\x01 \x01(\t\x12\x1d\n\x15\x63lean_all_checkpoints\x18\x02 \x01(\x08\"m\n\x1f\x43leanStatefulCheckpointResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12\x1e\n\x16\x63leaned_checkpoint_ids\x18\x02 \x03(\t\"W\n\x17InstanceStateCheckpoint\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\x12\r\n\x05state\x18\x02 \x01(\x0c\x12\x16\n\x0estate_location\x18\x03 \x01(\t\"J\n\x1b\x43heckpointComponentMetadata\x12\x16\n\x0e\x63omponent_name\x18\x01 \x02(\t\x12\x13\n\x0bparallelism\x18\x02 \x02(\x05\"\x8d\x01\n\x14RegisterStMgrRequest\x12\x15\n\rtopology_name\x18\x01 \x02(\t\x12\x13\n\x0btopology_id\x18\x02 \x02(\t\x12\x10\n\x08stmgr_id\x18\x03 \x02(\t\x12\x37\n\rphysical_plan\x18\x04 \x02(\x0b\x32 .heron.proto.system.PhysicalPlan\"C\n\x15RegisterStMgrResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\"\x8c\x01\n\x18SaveInstanceStateRequest\x12.\n\x08instance\x18\x01 \x02(\x0b\x32\x1c.heron.proto.system.Instance\x12@\n\ncheckpoint\x18\x02 \x02(\x0b\x32,.heron.proto.ckptmgr.InstanceStateCheckpoint\"\x8e\x01\n\x19SaveInstanceStateResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12.\n\x08instance\x18\x02 \x02(\x0b\x32\x1c.heron.proto.system.Instance\x12\x15\n\rcheckpoint_id\x18\x03 \x02(\t\"`\n\x17GetInstanceStateRequest\x12.\n\x08instance\x18\x01 \x02(\x0b\x32\x1c.heron.proto.system.Instance\x12\x15\n\rcheckpoint_id\x18\x02 \x02(\t\"\xcf\x01\n\x18GetInstanceStateResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12.\n\x08instance\x18\x02 \x02(\x0b\x32\x1c.heron.proto.system.Instance\x12\x15\n\rcheckpoint_id\x18\x03 \x02(\t\x12@\n\ncheckpoint\x18\x04 \x01(\x0b\x32,.heron.proto.ckptmgr.InstanceStateCheckpoint\"3\n\x1aInitiateStatefulCheckpoint\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\"[\n\x1cStoreInstanceStateCheckpoint\x12;\n\x05state\x18\x01 \x02(\x0b\x32,.heron.proto.ckptmgr.InstanceStateCheckpoint\"Z\n\x1bRestoreInstanceStateRequest\x12;\n\x05state\x18\x01 \x02(\x0b\x32,.heron.proto.ckptmgr.InstanceStateCheckpoint\"a\n\x1cRestoreInstanceStateResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\x12\x15\n\rcheckpoint_id\x18\x02 \x02(\t\"8\n\x1fStartInstanceStatefulProcessing\x12\x15\n\rcheckpoint_id\x18\x01 \x02(\t\"j\n\x1c\x44ownstreamStatefulCheckpoint\x12\x16\n\x0eorigin_task_id\x18\x01 \x02(\x05\x12\x1b\n\x13\x64\x65stination_task_id\x18\x02 \x02(\x05\x12\x15\n\rcheckpoint_id\x18\x03 \x02(\tB3\n\x1eorg.apache.heron.proto.ckptmgrB\x11\x43heckpointManager')
   ,
   dependencies=[common__pb2.DESCRIPTOR,physical__plan__pb2.DESCRIPTOR,])
 
@@ -1466,22 +1466,22 @@ _STARTSTMGRSTATEFULPROCESSING = _descriptor.Descriptor(
 )
 
 
-_REGISTERTMASTERREQUEST = _descriptor.Descriptor(
-  name='RegisterTMasterRequest',
-  full_name='heron.proto.ckptmgr.RegisterTMasterRequest',
+_REGISTERTMANAGERREQUEST = _descriptor.Descriptor(
+  name='RegisterTManagerRequest',
+  full_name='heron.proto.ckptmgr.RegisterTManagerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='topology_name', full_name='heron.proto.ckptmgr.RegisterTMasterRequest.topology_name', index=0,
+      name='topology_name', full_name='heron.proto.ckptmgr.RegisterTManagerRequest.topology_name', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='topology_id', full_name='heron.proto.ckptmgr.RegisterTMasterRequest.topology_id', index=1,
+      name='topology_id', full_name='heron.proto.ckptmgr.RegisterTManagerRequest.topology_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1500,19 +1500,19 @@ _REGISTERTMASTERREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=863,
-  serialized_end=931,
+  serialized_end=932,
 )
 
 
-_REGISTERTMASTERRESPONSE = _descriptor.Descriptor(
-  name='RegisterTMasterResponse',
-  full_name='heron.proto.ckptmgr.RegisterTMasterResponse',
+_REGISTERTMANAGERRESPONSE = _descriptor.Descriptor(
+  name='RegisterTManagerResponse',
+  full_name='heron.proto.ckptmgr.RegisterTManagerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='heron.proto.ckptmgr.RegisterTMasterResponse.status', index=0,
+      name='status', full_name='heron.proto.ckptmgr.RegisterTManagerResponse.status', index=0,
       number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1530,8 +1530,8 @@ _REGISTERTMASTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=933,
-  serialized_end=1002,
+  serialized_start=934,
+  serialized_end=1004,
 )
 
 
@@ -1568,8 +1568,8 @@ _CLEANSTATEFULCHECKPOINTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1004,
-  serialized_end=1104,
+  serialized_start=1006,
+  serialized_end=1106,
 )
 
 
@@ -1606,8 +1606,8 @@ _CLEANSTATEFULCHECKPOINTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1106,
-  serialized_end=1215,
+  serialized_start=1108,
+  serialized_end=1217,
 )
 
 
@@ -1651,8 +1651,8 @@ _INSTANCESTATECHECKPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1217,
-  serialized_end=1304,
+  serialized_start=1219,
+  serialized_end=1306,
 )
 
 
@@ -1689,8 +1689,8 @@ _CHECKPOINTCOMPONENTMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1306,
-  serialized_end=1380,
+  serialized_start=1308,
+  serialized_end=1382,
 )
 
 
@@ -1741,8 +1741,8 @@ _REGISTERSTMGRREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1383,
-  serialized_end=1524,
+  serialized_start=1385,
+  serialized_end=1526,
 )
 
 
@@ -1772,8 +1772,8 @@ _REGISTERSTMGRRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1526,
-  serialized_end=1593,
+  serialized_start=1528,
+  serialized_end=1595,
 )
 
 
@@ -1810,8 +1810,8 @@ _SAVEINSTANCESTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1596,
-  serialized_end=1736,
+  serialized_start=1598,
+  serialized_end=1738,
 )
 
 
@@ -1855,8 +1855,8 @@ _SAVEINSTANCESTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1739,
-  serialized_end=1881,
+  serialized_start=1741,
+  serialized_end=1883,
 )
 
 
@@ -1893,8 +1893,8 @@ _GETINSTANCESTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1883,
-  serialized_end=1979,
+  serialized_start=1885,
+  serialized_end=1981,
 )
 
 
@@ -1945,8 +1945,8 @@ _GETINSTANCESTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1982,
-  serialized_end=2189,
+  serialized_start=1984,
+  serialized_end=2191,
 )
 
 
@@ -1976,8 +1976,8 @@ _INITIATESTATEFULCHECKPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2191,
-  serialized_end=2242,
+  serialized_start=2193,
+  serialized_end=2244,
 )
 
 
@@ -2007,8 +2007,8 @@ _STOREINSTANCESTATECHECKPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2244,
-  serialized_end=2335,
+  serialized_start=2246,
+  serialized_end=2337,
 )
 
 
@@ -2038,8 +2038,8 @@ _RESTOREINSTANCESTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2337,
-  serialized_end=2427,
+  serialized_start=2339,
+  serialized_end=2429,
 )
 
 
@@ -2076,8 +2076,8 @@ _RESTOREINSTANCESTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2429,
-  serialized_end=2526,
+  serialized_start=2431,
+  serialized_end=2528,
 )
 
 
@@ -2107,8 +2107,8 @@ _STARTINSTANCESTATEFULPROCESSING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2528,
-  serialized_end=2584,
+  serialized_start=2530,
+  serialized_end=2586,
 )
 
 
@@ -2152,15 +2152,15 @@ _DOWNSTREAMSTATEFULCHECKPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2586,
-  serialized_end=2692,
+  serialized_start=2588,
+  serialized_end=2694,
 )
 
 _STATEFULCONSISTENTCHECKPOINTS.fields_by_name['consistent_checkpoints'].message_type = _STATEFULCONSISTENTCHECKPOINT
 _STATEFULCONSISTENTCHECKPOINTSAVED.fields_by_name['consistent_checkpoint'].message_type = _STATEFULCONSISTENTCHECKPOINT
 _RESTORETOPOLOGYSTATERESPONSE.fields_by_name['status'].message_type = common__pb2._STATUS
 _INSTANCESTATESTORED.fields_by_name['instance'].message_type = physical__plan__pb2._INSTANCE
-_REGISTERTMASTERRESPONSE.fields_by_name['status'].message_type = common__pb2._STATUS
+_REGISTERTMANAGERRESPONSE.fields_by_name['status'].message_type = common__pb2._STATUS
 _CLEANSTATEFULCHECKPOINTRESPONSE.fields_by_name['status'].message_type = common__pb2._STATUS
 _REGISTERSTMGRREQUEST.fields_by_name['physical_plan'].message_type = physical__plan__pb2._PHYSICALPLAN
 _REGISTERSTMGRRESPONSE.fields_by_name['status'].message_type = common__pb2._STATUS
@@ -2184,8 +2184,8 @@ DESCRIPTOR.message_types_by_name['RestoreTopologyStateResponse'] = _RESTORETOPOL
 DESCRIPTOR.message_types_by_name['ResetTopologyState'] = _RESETTOPOLOGYSTATE
 DESCRIPTOR.message_types_by_name['InstanceStateStored'] = _INSTANCESTATESTORED
 DESCRIPTOR.message_types_by_name['StartStmgrStatefulProcessing'] = _STARTSTMGRSTATEFULPROCESSING
-DESCRIPTOR.message_types_by_name['RegisterTMasterRequest'] = _REGISTERTMASTERREQUEST
-DESCRIPTOR.message_types_by_name['RegisterTMasterResponse'] = _REGISTERTMASTERRESPONSE
+DESCRIPTOR.message_types_by_name['RegisterTManagerRequest'] = _REGISTERTMANAGERREQUEST
+DESCRIPTOR.message_types_by_name['RegisterTManagerResponse'] = _REGISTERTMANAGERRESPONSE
 DESCRIPTOR.message_types_by_name['CleanStatefulCheckpointRequest'] = _CLEANSTATEFULCHECKPOINTREQUEST
 DESCRIPTOR.message_types_by_name['CleanStatefulCheckpointResponse'] = _CLEANSTATEFULCHECKPOINTRESPONSE
 DESCRIPTOR.message_types_by_name['InstanceStateCheckpoint'] = _INSTANCESTATECHECKPOINT
@@ -2267,19 +2267,19 @@ StartStmgrStatefulProcessing = _reflection.GeneratedProtocolMessageType('StartSt
   })
 _sym_db.RegisterMessage(StartStmgrStatefulProcessing)
 
-RegisterTMasterRequest = _reflection.GeneratedProtocolMessageType('RegisterTMasterRequest', (_message.Message,), {
-  'DESCRIPTOR' : _REGISTERTMASTERREQUEST,
+RegisterTManagerRequest = _reflection.GeneratedProtocolMessageType('RegisterTManagerRequest', (_message.Message,), {
+  'DESCRIPTOR' : _REGISTERTMANAGERREQUEST,
   '__module__' : 'ckptmgr_pb2'
-  # @@protoc_insertion_point(class_scope:heron.proto.ckptmgr.RegisterTMasterRequest)
+  # @@protoc_insertion_point(class_scope:heron.proto.ckptmgr.RegisterTManagerRequest)
   })
-_sym_db.RegisterMessage(RegisterTMasterRequest)
+_sym_db.RegisterMessage(RegisterTManagerRequest)
 
-RegisterTMasterResponse = _reflection.GeneratedProtocolMessageType('RegisterTMasterResponse', (_message.Message,), {
-  'DESCRIPTOR' : _REGISTERTMASTERRESPONSE,
+RegisterTManagerResponse = _reflection.GeneratedProtocolMessageType('RegisterTManagerResponse', (_message.Message,), {
+  'DESCRIPTOR' : _REGISTERTMANAGERRESPONSE,
   '__module__' : 'ckptmgr_pb2'
-  # @@protoc_insertion_point(class_scope:heron.proto.ckptmgr.RegisterTMasterResponse)
+  # @@protoc_insertion_point(class_scope:heron.proto.ckptmgr.RegisterTManagerResponse)
   })
-_sym_db.RegisterMessage(RegisterTMasterResponse)
+_sym_db.RegisterMessage(RegisterTManagerResponse)
 
 CleanStatefulCheckpointRequest = _reflection.GeneratedProtocolMessageType('CleanStatefulCheckpointRequest', (_message.Message,), {
   'DESCRIPTOR' : _CLEANSTATEFULCHECKPOINTREQUEST,
@@ -3127,7 +3127,7 @@ DESCRIPTOR._options = None
       </div>
       
       <div class="item">
-      <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterRequest" class="name">class <span class="ident">RegisterTMasterRequest</span></p>
+      <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerRequest" class="name">class <span class="ident">RegisterTManagerRequest</span></p>
       
   
     <div class="desc"><p>A ProtocolMessage</p></div>
@@ -3138,14 +3138,14 @@ DESCRIPTOR._options = None
       <div class="class">
           <h3>Ancestors (in MRO)</h3>
           <ul class="class_list">
-          <li><a href="#heronpy.proto.ckptmgr_pb2.RegisterTMasterRequest">RegisterTMasterRequest</a></li>
+          <li><a href="#heronpy.proto.ckptmgr_pb2.RegisterTManagerRequest">RegisterTManagerRequest</a></li>
           <li>google.protobuf.pyext._message.CMessage</li>
           <li>google.protobuf.message.Message</li>
           <li>builtins.object</li>
           </ul>
           <h3>Class variables</h3>
             <div class="item">
-            <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterRequest.DESCRIPTOR" class="name">var <span class="ident">DESCRIPTOR</span></p>
+            <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerRequest.DESCRIPTOR" class="name">var <span class="ident">DESCRIPTOR</span></p>
             
 
             
@@ -3155,7 +3155,7 @@ DESCRIPTOR._options = None
 
             </div>
             <div class="item">
-            <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterRequest.Extensions" class="name">var <span class="ident">Extensions</span></p>
+            <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerRequest.Extensions" class="name">var <span class="ident">Extensions</span></p>
             
 
             
@@ -3165,7 +3165,7 @@ DESCRIPTOR._options = None
 
             </div>
             <div class="item">
-            <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterRequest.topology_id" class="name">var <span class="ident">topology_id</span></p>
+            <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerRequest.topology_id" class="name">var <span class="ident">topology_id</span></p>
             
 
             
@@ -3175,7 +3175,7 @@ DESCRIPTOR._options = None
 
             </div>
             <div class="item">
-            <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterRequest.topology_name" class="name">var <span class="ident">topology_name</span></p>
+            <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerRequest.topology_name" class="name">var <span class="ident">topology_name</span></p>
             
 
             
@@ -3188,7 +3188,7 @@ DESCRIPTOR._options = None
       </div>
       
       <div class="item">
-      <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterResponse" class="name">class <span class="ident">RegisterTMasterResponse</span></p>
+      <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerResponse" class="name">class <span class="ident">RegisterTManagerResponse</span></p>
       
   
     <div class="desc"><p>A ProtocolMessage</p></div>
@@ -3199,14 +3199,14 @@ DESCRIPTOR._options = None
       <div class="class">
           <h3>Ancestors (in MRO)</h3>
           <ul class="class_list">
-          <li><a href="#heronpy.proto.ckptmgr_pb2.RegisterTMasterResponse">RegisterTMasterResponse</a></li>
+          <li><a href="#heronpy.proto.ckptmgr_pb2.RegisterTManagerResponse">RegisterTManagerResponse</a></li>
           <li>google.protobuf.pyext._message.CMessage</li>
           <li>google.protobuf.message.Message</li>
           <li>builtins.object</li>
           </ul>
           <h3>Class variables</h3>
             <div class="item">
-            <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterResponse.DESCRIPTOR" class="name">var <span class="ident">DESCRIPTOR</span></p>
+            <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerResponse.DESCRIPTOR" class="name">var <span class="ident">DESCRIPTOR</span></p>
             
 
             
@@ -3216,7 +3216,7 @@ DESCRIPTOR._options = None
 
             </div>
             <div class="item">
-            <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterResponse.Extensions" class="name">var <span class="ident">Extensions</span></p>
+            <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerResponse.Extensions" class="name">var <span class="ident">Extensions</span></p>
             
 
             
@@ -3226,7 +3226,7 @@ DESCRIPTOR._options = None
 
             </div>
             <div class="item">
-            <p id="heronpy.proto.ckptmgr_pb2.RegisterTMasterResponse.status" class="name">var <span class="ident">status</span></p>
+            <p id="heronpy.proto.ckptmgr_pb2.RegisterTManagerResponse.status" class="name">var <span class="ident">status</span></p>
             
 
             

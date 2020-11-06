@@ -987,7 +987,7 @@ table {
     <li class="mono"><a href="#heronpy.proto.common_pb2.STATE_WRITE_ERROR">STATE_WRITE_ERROR</a></li>
     <li class="mono"><a href="#heronpy.proto.common_pb2.STMGR_DIDNT_REGISTER">STMGR_DIDNT_REGISTER</a></li>
     <li class="mono"><a href="#heronpy.proto.common_pb2.StatusCode">StatusCode</a></li>
-    <li class="mono"><a href="#heronpy.proto.common_pb2.TMASTERLOCATION_ALREADY_EXISTS">TMASTERLOCATION_ALREADY_EXISTS</a></li>
+    <li class="mono"><a href="#heronpy.proto.common_pb2.TMANAGERLOCATION_ALREADY_EXISTS">TMANAGERLOCATION_ALREADY_EXISTS</a></li>
     <li class="mono"><a href="#heronpy.proto.common_pb2.TOPOLOGY_ALREADY_ACTIVE">TOPOLOGY_ALREADY_ACTIVE</a></li>
     <li class="mono"><a href="#heronpy.proto.common_pb2.TOPOLOGY_ALREADY_DEACTIVE">TOPOLOGY_ALREADY_DEACTIVE</a></li>
   </ul>
@@ -1043,7 +1043,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='heron.proto.system',
   syntax='proto2',
   serialized_options=_b('\n\035org.apache.heron.proto.systemB\006Common'),
-  serialized_pb=_b('\n\x0c\x63ommon.proto\x12\x12heron.proto.system\"I\n\x06Status\x12.\n\x06status\x18\x01 \x02(\x0e\x32\x1e.heron.proto.system.StatusCode\x12\x0f\n\x07message\x18\x02 \x01(\t*\x9d\x03\n\nStatusCode\x12\x06\n\x02OK\x10\x01\x12\t\n\x05NOTOK\x10\x02\x12\x19\n\x15INVALID_TOPOLOGY_NAME\x10\x64\x12\x1b\n\x17TOPOLOGY_ALREADY_ACTIVE\x10\x65\x12\x1d\n\x19TOPOLOGY_ALREADY_DEACTIVE\x10\x66\x12\x17\n\x13NOT_YET_IMPLEMENTED\x10g\x12\x12\n\rINVALID_STMGR\x10\xe8\x07\x12\x19\n\x14STMGR_DIDNT_REGISTER\x10\xe9\x07\x12\x15\n\x10\x44UPLICATE_STRMGR\x10\xea\x07\x12\x18\n\x13PATH_DOES_NOT_EXIST\x10\xd0\x0f\x12\x18\n\x13PATH_ALREADY_EXISTS\x10\xd1\x0f\x12#\n\x1eTMASTERLOCATION_ALREADY_EXISTS\x10\xd2\x0f\x12\x14\n\x0fSTATE_CORRUPTED\x10\xd3\x0f\x12\x15\n\x10STATE_READ_ERROR\x10\xd4\x0f\x12\x16\n\x11STATE_WRITE_ERROR\x10\xd5\x0f\x12(\n#METRICSCACHELOCATION_ALREADY_EXISTS\x10\xd6\x0f\x42\'\n\x1dorg.apache.heron.proto.systemB\x06\x43ommon')
+  serialized_pb=_b('\n\x0c\x63ommon.proto\x12\x12heron.proto.system\"I\n\x06Status\x12.\n\x06status\x18\x01 \x02(\x0e\x32\x1e.heron.proto.system.StatusCode\x12\x0f\n\x07message\x18\x02 \x01(\t*\x9e\x03\n\nStatusCode\x12\x06\n\x02OK\x10\x01\x12\t\n\x05NOTOK\x10\x02\x12\x19\n\x15INVALID_TOPOLOGY_NAME\x10\x64\x12\x1b\n\x17TOPOLOGY_ALREADY_ACTIVE\x10\x65\x12\x1d\n\x19TOPOLOGY_ALREADY_DEACTIVE\x10\x66\x12\x17\n\x13NOT_YET_IMPLEMENTED\x10g\x12\x12\n\rINVALID_STMGR\x10\xe8\x07\x12\x19\n\x14STMGR_DIDNT_REGISTER\x10\xe9\x07\x12\x15\n\x10\x44UPLICATE_STRMGR\x10\xea\x07\x12\x18\n\x13PATH_DOES_NOT_EXIST\x10\xd0\x0f\x12\x18\n\x13PATH_ALREADY_EXISTS\x10\xd1\x0f\x12$\n\x1fTMANAGERLOCATION_ALREADY_EXISTS\x10\xd2\x0f\x12\x14\n\x0fSTATE_CORRUPTED\x10\xd3\x0f\x12\x15\n\x10STATE_READ_ERROR\x10\xd4\x0f\x12\x16\n\x11STATE_WRITE_ERROR\x10\xd5\x0f\x12(\n#METRICSCACHELOCATION_ALREADY_EXISTS\x10\xd6\x0f\x42\'\n\x1dorg.apache.heron.proto.systemB\x06\x43ommon')
 )
 
 _STATUSCODE = _descriptor.EnumDescriptor(
@@ -1097,7 +1097,7 @@ _STATUSCODE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TMASTERLOCATION_ALREADY_EXISTS', index=11, number=2002,
+      name='TMANAGERLOCATION_ALREADY_EXISTS', index=11, number=2002,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
@@ -1120,7 +1120,7 @@ _STATUSCODE = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=112,
-  serialized_end=525,
+  serialized_end=526,
 )
 _sym_db.RegisterEnumDescriptor(_STATUSCODE)
 
@@ -1136,7 +1136,7 @@ STMGR_DIDNT_REGISTER = 1001
 DUPLICATE_STRMGR = 1002
 PATH_DOES_NOT_EXIST = 2000
 PATH_ALREADY_EXISTS = 2001
-TMASTERLOCATION_ALREADY_EXISTS = 2002
+TMANAGERLOCATION_ALREADY_EXISTS = 2002
 STATE_CORRUPTED = 2003
 STATE_READ_ERROR = 2004
 STATE_WRITE_ERROR = 2005
@@ -1324,7 +1324,7 @@ DESCRIPTOR._options = None
 
       </div>
       <div class="item">
-      <p id="heronpy.proto.common_pb2.TMASTERLOCATION_ALREADY_EXISTS" class="name">var <span class="ident">TMASTERLOCATION_ALREADY_EXISTS</span></p>
+      <p id="heronpy.proto.common_pb2.TMANAGERLOCATION_ALREADY_EXISTS" class="name">var <span class="ident">TMANAGERLOCATION_ALREADY_EXISTS</span></p>
       
   
   <div class="source_cont">

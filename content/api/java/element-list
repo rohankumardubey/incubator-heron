@@ -109,7 +109,7 @@ org.apache.heron.metricsmgr
 org.apache.heron.metricsmgr.executor
 org.apache.heron.metricsmgr.sink
 org.apache.heron.metricsmgr.sink.metricscache
-org.apache.heron.metricsmgr.sink.tmaster
+org.apache.heron.metricsmgr.sink.tmanager
 org.apache.heron.network
 org.apache.heron.packing
 org.apache.heron.packing.binpacking

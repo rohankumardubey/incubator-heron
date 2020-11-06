@@ -1009,7 +1009,7 @@ table {
         
         </li>
         <li class="mono">
-        <span class="class_name"><a href="#heronpy.proto.metrics_pb2.TMasterLocationRefreshMessage">TMasterLocationRefreshMessage</a></span>
+        <span class="class_name"><a href="#heronpy.proto.metrics_pb2.TManagerLocationRefreshMessage">TManagerLocationRefreshMessage</a></span>
         
         </li>
       </ul>
@@ -1047,7 +1047,7 @@ _sym_db = _symbol_database.Default()
 
 
 from . import common_pb2 as common__pb2
-from . import tmaster_pb2 as tmaster__pb2
+from . import tmanager_pb2 as tmanager__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -1055,9 +1055,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='heron.proto.system',
   syntax='proto2',
   serialized_options=_b('\n\035org.apache.heron.proto.systemB\007Metrics'),
-  serialized_pb=_b('\n\rmetrics.proto\x12\x12heron.proto.system\x1a\x0c\x63ommon.proto\x1a\rtmaster.proto\"*\n\x0bMetricDatum\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05value\x18\x02 \x02(\t\"h\n\rExceptionData\x12\x12\n\nstacktrace\x18\x01 \x02(\t\x12\x10\n\x08lasttime\x18\x02 \x02(\t\x12\x11\n\tfirsttime\x18\x03 \x02(\t\x12\r\n\x05\x63ount\x18\x04 \x02(\x05\x12\x0f\n\x07logging\x18\x05 \x02(\t\"v\n\x0fMetricPublisher\x12\x10\n\x08hostname\x18\x01 \x02(\t\x12\x0c\n\x04port\x18\x02 \x02(\x05\x12\x16\n\x0e\x63omponent_name\x18\x03 \x02(\t\x12\x13\n\x0binstance_id\x18\x04 \x02(\t\x12\x16\n\x0einstance_index\x18\x05 \x02(\x05\"X\n\x1eMetricPublisherRegisterRequest\x12\x36\n\tpublisher\x18\x01 \x02(\x0b\x32#.heron.proto.system.MetricPublisher\"M\n\x1fMetricPublisherRegisterResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\"\x88\x01\n\x1dMetricPublisherPublishMessage\x12\x30\n\x07metrics\x18\x01 \x03(\x0b\x32\x1f.heron.proto.system.MetricDatum\x12\x35\n\nexceptions\x18\x02 \x03(\x0b\x32!.heron.proto.system.ExceptionData\"V\n\x1dTMasterLocationRefreshMessage\x12\x35\n\x07tmaster\x18\x01 \x02(\x0b\x32$.heron.proto.tmaster.TMasterLocation\"e\n\"MetricsCacheLocationRefreshMessage\x12?\n\x0cmetricscache\x18\x01 \x02(\x0b\x32).heron.proto.tmaster.MetricsCacheLocationB(\n\x1dorg.apache.heron.proto.systemB\x07Metrics')
+  serialized_pb=_b('\n\rmetrics.proto\x12\x12heron.proto.system\x1a\x0c\x63ommon.proto\x1a\x0etmanager.proto\"*\n\x0bMetricDatum\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05value\x18\x02 \x02(\t\"h\n\rExceptionData\x12\x12\n\nstacktrace\x18\x01 \x02(\t\x12\x10\n\x08lasttime\x18\x02 \x02(\t\x12\x11\n\tfirsttime\x18\x03 \x02(\t\x12\r\n\x05\x63ount\x18\x04 \x02(\x05\x12\x0f\n\x07logging\x18\x05 \x02(\t\"v\n\x0fMetricPublisher\x12\x10\n\x08hostname\x18\x01 \x02(\t\x12\x0c\n\x04port\x18\x02 \x02(\x05\x12\x16\n\x0e\x63omponent_name\x18\x03 \x02(\t\x12\x13\n\x0binstance_id\x18\x04 \x02(\t\x12\x16\n\x0einstance_index\x18\x05 \x02(\x05\"X\n\x1eMetricPublisherRegisterRequest\x12\x36\n\tpublisher\x18\x01 \x02(\x0b\x32#.heron.proto.system.MetricPublisher\"M\n\x1fMetricPublisherRegisterResponse\x12*\n\x06status\x18\x01 \x02(\x0b\x32\x1a.heron.proto.system.Status\"\x88\x01\n\x1dMetricPublisherPublishMessage\x12\x30\n\x07metrics\x18\x01 \x03(\x0b\x32\x1f.heron.proto.system.MetricDatum\x12\x35\n\nexceptions\x18\x02 \x03(\x0b\x32!.heron.proto.system.ExceptionData\"Z\n\x1eTManagerLocationRefreshMessage\x12\x38\n\x08tmanager\x18\x01 \x02(\x0b\x32&.heron.proto.tmanager.TManagerLocation\"f\n\"MetricsCacheLocationRefreshMessage\x12@\n\x0cmetricscache\x18\x01 \x02(\x0b\x32*.heron.proto.tmanager.MetricsCacheLocationB(\n\x1dorg.apache.heron.proto.systemB\x07Metrics')
   ,
-  dependencies=[common__pb2.DESCRIPTOR,tmaster__pb2.DESCRIPTOR,])
+  dependencies=[common__pb2.DESCRIPTOR,tmanager__pb2.DESCRIPTOR,])
 
 
 
@@ -1095,8 +1095,8 @@ _METRICDATUM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=66,
-  serialized_end=108,
+  serialized_start=67,
+  serialized_end=109,
 )
 
 
@@ -1154,8 +1154,8 @@ _EXCEPTIONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=110,
-  serialized_end=214,
+  serialized_start=111,
+  serialized_end=215,
 )
 
 
@@ -1213,8 +1213,8 @@ _METRICPUBLISHER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=216,
-  serialized_end=334,
+  serialized_start=217,
+  serialized_end=335,
 )
 
 
@@ -1244,8 +1244,8 @@ _METRICPUBLISHERREGISTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=336,
-  serialized_end=424,
+  serialized_start=337,
+  serialized_end=425,
 )
 
 
@@ -1275,8 +1275,8 @@ _METRICPUBLISHERREGISTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=426,
-  serialized_end=503,
+  serialized_start=427,
+  serialized_end=504,
 )
 
 
@@ -1313,20 +1313,20 @@ _METRICPUBLISHERPUBLISHMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=506,
-  serialized_end=642,
+  serialized_start=507,
+  serialized_end=643,
 )
 
 
-_TMASTERLOCATIONREFRESHMESSAGE = _descriptor.Descriptor(
-  name='TMasterLocationRefreshMessage',
-  full_name='heron.proto.system.TMasterLocationRefreshMessage',
+_TMANAGERLOCATIONREFRESHMESSAGE = _descriptor.Descriptor(
+  name='TManagerLocationRefreshMessage',
+  full_name='heron.proto.system.TManagerLocationRefreshMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tmaster', full_name='heron.proto.system.TMasterLocationRefreshMessage.tmaster', index=0,
+      name='tmanager', full_name='heron.proto.system.TManagerLocationRefreshMessage.tmanager', index=0,
       number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1344,8 +1344,8 @@ _TMASTERLOCATIONREFRESHMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=644,
-  serialized_end=730,
+  serialized_start=645,
+  serialized_end=735,
 )
 
 
@@ -1375,23 +1375,23 @@ _METRICSCACHELOCATIONREFRESHMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=732,
-  serialized_end=833,
+  serialized_start=737,
+  serialized_end=839,
 )
 
 _METRICPUBLISHERREGISTERREQUEST.fields_by_name['publisher'].message_type = _METRICPUBLISHER
 _METRICPUBLISHERREGISTERRESPONSE.fields_by_name['status'].message_type = common__pb2._STATUS
 _METRICPUBLISHERPUBLISHMESSAGE.fields_by_name['metrics'].message_type = _METRICDATUM
 _METRICPUBLISHERPUBLISHMESSAGE.fields_by_name['exceptions'].message_type = _EXCEPTIONDATA
-_TMASTERLOCATIONREFRESHMESSAGE.fields_by_name['tmaster'].message_type = tmaster__pb2._TMASTERLOCATION
-_METRICSCACHELOCATIONREFRESHMESSAGE.fields_by_name['metricscache'].message_type = tmaster__pb2._METRICSCACHELOCATION
+_TMANAGERLOCATIONREFRESHMESSAGE.fields_by_name['tmanager'].message_type = tmanager__pb2._TMANAGERLOCATION
+_METRICSCACHELOCATIONREFRESHMESSAGE.fields_by_name['metricscache'].message_type = tmanager__pb2._METRICSCACHELOCATION
 DESCRIPTOR.message_types_by_name['MetricDatum'] = _METRICDATUM
 DESCRIPTOR.message_types_by_name['ExceptionData'] = _EXCEPTIONDATA
 DESCRIPTOR.message_types_by_name['MetricPublisher'] = _METRICPUBLISHER
 DESCRIPTOR.message_types_by_name['MetricPublisherRegisterRequest'] = _METRICPUBLISHERREGISTERREQUEST
 DESCRIPTOR.message_types_by_name['MetricPublisherRegisterResponse'] = _METRICPUBLISHERREGISTERRESPONSE
 DESCRIPTOR.message_types_by_name['MetricPublisherPublishMessage'] = _METRICPUBLISHERPUBLISHMESSAGE
-DESCRIPTOR.message_types_by_name['TMasterLocationRefreshMessage'] = _TMASTERLOCATIONREFRESHMESSAGE
+DESCRIPTOR.message_types_by_name['TManagerLocationRefreshMessage'] = _TMANAGERLOCATIONREFRESHMESSAGE
 DESCRIPTOR.message_types_by_name['MetricsCacheLocationRefreshMessage'] = _METRICSCACHELOCATIONREFRESHMESSAGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1437,12 +1437,12 @@ MetricPublisherPublishMessage = _reflection.GeneratedProtocolMessageType('Metric
   })
 _sym_db.RegisterMessage(MetricPublisherPublishMessage)
 
-TMasterLocationRefreshMessage = _reflection.GeneratedProtocolMessageType('TMasterLocationRefreshMessage', (_message.Message,), {
-  'DESCRIPTOR' : _TMASTERLOCATIONREFRESHMESSAGE,
+TManagerLocationRefreshMessage = _reflection.GeneratedProtocolMessageType('TManagerLocationRefreshMessage', (_message.Message,), {
+  'DESCRIPTOR' : _TMANAGERLOCATIONREFRESHMESSAGE,
   '__module__' : 'metrics_pb2'
-  # @@protoc_insertion_point(class_scope:heron.proto.system.TMasterLocationRefreshMessage)
+  # @@protoc_insertion_point(class_scope:heron.proto.system.TManagerLocationRefreshMessage)
   })
-_sym_db.RegisterMessage(TMasterLocationRefreshMessage)
+_sym_db.RegisterMessage(TManagerLocationRefreshMessage)
 
 MetricsCacheLocationRefreshMessage = _reflection.GeneratedProtocolMessageType('MetricsCacheLocationRefreshMessage', (_message.Message,), {
   'DESCRIPTOR' : _METRICSCACHELOCATIONREFRESHMESSAGE,
@@ -1931,7 +1931,7 @@ DESCRIPTOR._options = None
       </div>
       
       <div class="item">
-      <p id="heronpy.proto.metrics_pb2.TMasterLocationRefreshMessage" class="name">class <span class="ident">TMasterLocationRefreshMessage</span></p>
+      <p id="heronpy.proto.metrics_pb2.TManagerLocationRefreshMessage" class="name">class <span class="ident">TManagerLocationRefreshMessage</span></p>
       
   
     <div class="desc"><p>A ProtocolMessage</p></div>
@@ -1942,14 +1942,14 @@ DESCRIPTOR._options = None
       <div class="class">
           <h3>Ancestors (in MRO)</h3>
           <ul class="class_list">
-          <li><a href="#heronpy.proto.metrics_pb2.TMasterLocationRefreshMessage">TMasterLocationRefreshMessage</a></li>
+          <li><a href="#heronpy.proto.metrics_pb2.TManagerLocationRefreshMessage">TManagerLocationRefreshMessage</a></li>
           <li>google.protobuf.pyext._message.CMessage</li>
           <li>google.protobuf.message.Message</li>
           <li>builtins.object</li>
           </ul>
           <h3>Class variables</h3>
             <div class="item">
-            <p id="heronpy.proto.metrics_pb2.TMasterLocationRefreshMessage.DESCRIPTOR" class="name">var <span class="ident">DESCRIPTOR</span></p>
+            <p id="heronpy.proto.metrics_pb2.TManagerLocationRefreshMessage.DESCRIPTOR" class="name">var <span class="ident">DESCRIPTOR</span></p>
             
 
             
@@ -1959,7 +1959,7 @@ DESCRIPTOR._options = None
 
             </div>
             <div class="item">
-            <p id="heronpy.proto.metrics_pb2.TMasterLocationRefreshMessage.Extensions" class="name">var <span class="ident">Extensions</span></p>
+            <p id="heronpy.proto.metrics_pb2.TManagerLocationRefreshMessage.Extensions" class="name">var <span class="ident">Extensions</span></p>
             
 
             
@@ -1969,7 +1969,7 @@ DESCRIPTOR._options = None
 
             </div>
             <div class="item">
-            <p id="heronpy.proto.metrics_pb2.TMasterLocationRefreshMessage.tmaster" class="name">var <span class="ident">tmaster</span></p>
+            <p id="heronpy.proto.metrics_pb2.TManagerLocationRefreshMessage.tmanager" class="name">var <span class="ident">tmanager</span></p>
             
 
             
