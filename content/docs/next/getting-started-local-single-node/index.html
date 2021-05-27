@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Local (Single Node) · Apache Heron</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;!--"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Local (Single Node) · Apache Heron"/><meta property="og:type" content="website"/><meta property="og:url" content="https://heron.incubator.apache.org/"/><meta property="og:description" content="&lt;!--"/><meta property="og:image" content="https://heron.incubator.apache.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://heron.incubator.apache.org/img/undraw_tweetstorm.svg"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon-32x32.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Local (Single Node) · Apache Heron</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;!--"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Local (Single Node) · Apache Heron"/><meta property="og:type" content="website"/><meta property="og:url" content="https://heron.apache.org/"/><meta property="og:description" content="&lt;!--"/><meta property="og:image" content="https://heron.apache.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://heron.apache.org/img/undraw_tweetstorm.svg"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon-32x32.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -89,19 +89,9 @@ For other platforms, you need to build from source. Please refer to the <a href=
 The supported platforms are CentOS7, Debian10, and Ubuntu18.04.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="using-installation-scripts"></a><a href="#using-installation-scripts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using installation scripts</h2>
-<p>To install Heron binaries directly, using installation scripts, go to Heron's <a href="https://github.com/apache/incubator-heron/releases">releases page</a> on GitHub
-and see a full listing of Heron releases for each available platform. The installation script for macOS (<code>darwin</code>), for example, is named
-<code>heron-install-0.20.4-incubating-darwin.sh</code>.</p>
-<pre><code class="hljs css language-bash">$ wget https://github.com/apache/incubator-heron/releases/download/0.20.4-incubating/heron-install-0.20.4-incubating-darwin.sh
-
-
-</code></pre>
-<p>Download the for your platform either from the releases page or using <a href="https://www.gnu.org/software/wget/"><code>wget</code></a>. Here's a <code>wget</code> example for Ubuntu:</p>
-<pre><code class="hljs css language-bash">$ wget https://github.com/apache/incubator-heron/releases/download/0.20.4-incubating/heron-install-0.20.4-incubating-ubuntu18.04.sh
-</code></pre>
-<p>Debian10</p>
-<pre><code class="hljs css language-bash">$ wget https://github.com/apache/incubator-heron/releases/download/0.20.4-incubating/heron-install-0.20.4-incubating-debian.sh
-</code></pre>
+<p>To install Heron binaries directly, using installation scripts, go to Heron's <a href="https://heron.apache.org/download">download page</a>
+and see a full listing of Heron releases for each available platform. The installation script for macOS (<code>debian10</code>), for example, is named
+<code>heron-install-0.20.4-incubating-debian10.sh</code>.</p>
 <p>Once you've downloaded the script, make it executable using <a href="https://en.wikipedia.org/wiki/Chmod">chmod</a>:</p>
 <pre><code class="hljs css language-bash">$ chmod +x heron-*.sh
 </code></pre>
@@ -225,7 +215,7 @@ Available commands:
     submit             Submit a topology
     version            Print version of heron-cli
 
-For detailed documentation, go to https://heron.incubator.apache.org
+For detailed documentation, go to https://heron.apache.org
 </code></pre>
 <p>To invoke help output for a command, run <code>heron help COMMAND</code>. Here's an
 example:</p>
