@@ -78,9 +78,6 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<blockquote>
-<p>This document pertains to the older, Storm-based, Heron Topology API.  Heron now offers two separate APIs for building topologies: the original, <a href="https://storm.apache.org">Storm</a>-based Topology API, and the newer <a href="../../../concepts/topologies#the-heron-streamlet-api">Streamlet API</a>. Topologies created using the Topology API can still run on Heron and there are currently no plans to deprecate this API. We would, however, recommend that you use the Streamlet API for future work.</p>
-</blockquote>
 <p>A topology specifies components like spouts and bolts, as well as the relation
 between components and proper configurations. The
 <a href="http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.heron%22%20AND%20a%3A%22heron-api%22"><code>heron-api</code></a>
@@ -128,10 +125,10 @@ configuration file:</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
 </code></pre>
 <p>Once your <code>pom.xml</code> is properly set up, you can compile the JAR with dependencies using this command:</p>
-<pre><code class="hljs css language-bash">$ mvn assembly:assembly
+<pre><code class="hljs css language-bash">$ mvn package
 </code></pre>
 <p>By default, this will add a JAR in your project's <code>target</code> folder with the name <code>PROJECT-NAME-VERSION-jar-with-dependencies.jar</code>. Here's an example topology submission command using a compiled JAR:</p>
-<pre><code class="hljs css language-bash">$ mvn assembly:assembly
+<pre><code class="hljs css language-bash">$ mvn package
 $ heron submit <span class="hljs-built_in">local</span> \
   target/my-project-1.2.3-jar-with-dependencies.jar \
   com.example.Main \
