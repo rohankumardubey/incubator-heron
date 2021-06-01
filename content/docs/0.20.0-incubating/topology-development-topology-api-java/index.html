@@ -128,10 +128,10 @@ configuration file:</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
 </code></pre>
 <p>Once your <code>pom.xml</code> is properly set up, you can compile the JAR with dependencies using this command:</p>
-<pre><code class="hljs css language-bash">$ mvn assembly:assembly
+<pre><code class="hljs css language-bash">$ mvn package
 </code></pre>
 <p>By default, this will add a JAR in your project's <code>target</code> folder with the name <code>PROJECT-NAME-VERSION-jar-with-dependencies.jar</code>. Here's an example topology submission command using a compiled JAR:</p>
-<pre><code class="hljs css language-bash">$ mvn assembly:assembly
+<pre><code class="hljs css language-bash">$ mvn package
 $ heron submit <span class="hljs-built_in">local</span> \
   target/my-project-1.2.3-jar-with-dependencies.jar \
   com.example.Main \
